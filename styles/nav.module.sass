@@ -1,6 +1,7 @@
 @import _mixin
     
 .linkWrap
+    opacity: 0
     height: 100vh
     top: 0 
     right: 0
@@ -10,9 +11,10 @@
     @include flex(flex-end,space-evenly,column)
     background: rgba(255,255,255,.1)
     box-shadow: 0 -1vh 3vh rgba(0,0,0,.6)
-    @include blur(.3)
+    @include blur(1)
     padding: 0 3vw
-    z-index: 0
+    z-index: 1
+
     h3
         font-size: 7vh
         letter-spacing: 1vw
@@ -28,8 +30,6 @@
 
 .wrapper
     @include flex(flex-end,flex-start,column)
-
-    
     gap: 3vh    
     .menu
         z-index:5
