@@ -21,7 +21,7 @@ export default function Home() {
 
       <span className={styles.name} >
         
-          <p>I&apos;m</p> 
+          <p className={styles.first} >I&apos;m</p> 
       
             <p className={styles.inner} >
               <span className={styles.text}>anish kanna</span>

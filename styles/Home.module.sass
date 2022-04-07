@@ -19,33 +19,35 @@
     transition: all 400ms ease
     width: 100vw
     text-align: left
-    border: 1px solid green
-    max-height: 20vh
-    @include fromDesktop(flex-start,flex-start,row)
-    @include fromBase(flex-start,flex-start,column)    
+    
+    @include flex(flex-start,flex-start,row wrap)
     &:hover
         color: $grun
         letter-spacing: 2vw
     > *
-        padding-left: 2vw
         text-align: left
         height: 100%   
+        
+    .first
+        width: fit-content
+        padding-right: 2vw   
     .inner
         @include flex(flex-start,center,row)
-        width: 50%  
+        width: 70%  
         overflow: hidden  
         height: 100%
+
         padding-left: 5vw
         .text
-            min-width: 100vw
+            min-width: 100vh
             text-align: left
             height: 50%
-            animation: span 10s linear infinite alternate     
+            animation: span 10s linear infinite      
             @keyframes span
                 0%
-                    transform: translate3d(-50%,0,0)
+                    transform: translate3d(-100%,0,0)
                 100%
-                    transform: translate3d(50%,0,0)
+                    transform: translate3d(100%,0,0)
                           
             
             
@@ -56,7 +58,6 @@
 .homeWrap
     min-width: 95vw
     min-height: 90vh
-
     @include flex(flex-start,center,column)
     .hello
         font-size: $h1
@@ -64,7 +65,7 @@
         transform: perspective(100vh) rotateX(0)
         position: relative
         transform-style: preserve-3d
-        border: 1px solid rgba(255,255,255,.2)
+        
         height: 10vh
         width: 35vh
 
