@@ -32,7 +32,7 @@ const Navbar = () => {
   return (
     <div className={nav.wrapper} >
 
-      <section className={nav.menu} onClick ={()=> {setMenu(!menu)}} style={menu? {boxShadow: '0 0 4vh -.8vh rgba(0,0,0,.6)' , transform: 'perspective(10vh) rotateY(180deg)' } : {boxShadow: '0 0 4vh -.8vh rgba(0,0,0,0)' , transform: 'perspective(10vh) rotateY(0deg)' } }  >
+      <section className={nav.menu} onClick ={()=> {setMenu(!menu)}} style={menu? {boxShadow: '0 0 4vh -.8vh rgba(0,0,0,.6)'} : {boxShadow: '0 0 4vh -.8vh rgba(0,0,0,0)' } }  >
       <div style={menu ? {transform: 'rotate(235deg)' , top: '45%'} : {transform: 'rotate(0)' , top: '1.25vh'}  } ></div>
       <div style={menu ? { opacity: '0' , scale: '0'}: {opacity: '1' ,scale: '1'}} ></div>
       <div style={menu ? {transform: 'rotate(-235deg) translate3d(0,0,2vh)' , top: '45%' } : {transform: 'rotate(0) translate3d(0,0,2vh)' , bottom: '1.25vh'}  } ></div>
