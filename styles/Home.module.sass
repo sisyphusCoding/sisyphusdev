@@ -1,10 +1,83 @@
 @import _mixin
 
 
+@keyframes flip
+    0%,100% 
+        transform: perspective(100vh) rotateX(0)
+    40%,60%
+        transform: perspective(100vh) rotateX(-180deg)    
 
+
+
+
+.name
+    font-size: $h1 + 10
+    font-weight: bold
+    letter-spacing: 1vw
+    color: $white
+    text-shadow: 0 0 1vh transparent
+    transition: all 400ms ease
+    width: 100vw
+    text-align: left
+    border: 1px solid green
+    max-height: 20vh
+    @include fromDesktop(flex-start,flex-start,row)
+    @include fromBase(flex-start,flex-start,column)    
+    &:hover
+        color: $grun
+        letter-spacing: 2vw
+    > *
+        padding-left: 2vw
+        text-align: left
+        height: 100%   
+    .inner
+        @include flex(flex-start,center,row)
+        width: 50%  
+        overflow: hidden  
+        height: 100%
+        padding-left: 5vw
+        .text
+            min-width: 100vw
+            text-align: left
+            height: 50%
+            animation: span 10s linear infinite alternate     
+            @keyframes span
+                0%
+                    transform: translate3d(-50%,0,0)
+                100%
+                    transform: translate3d(50%,0,0)
+                          
+            
+            
+          
+            
 
 
 .homeWrap
     min-width: 95vw
     min-height: 90vh
-    border: 1px solid #000
+
+    @include flex(flex-start,center,column)
+    .hello
+        font-size: $h1
+        letter-spacing: 1vw
+        transform: perspective(100vh) rotateX(0)
+        position: relative
+        transform-style: preserve-3d
+        border: 1px solid rgba(255,255,255,.2)
+        height: 10vh
+        width: 35vh
+
+        animation: flip 3s ease infinite 4s alternate
+        > *
+            transform-style: preserve-3d
+            position: absolute
+            text-align: center
+            height: 100%
+            width: 100%
+            line-height: 10vh
+            backface-visibility: hidden
+        .front
+            transform: perspective(100vh) rotateX(0) translate3d(0,0,2vh) 
+        .back   
+            transform: perspective(100vh) rotateX(180deg) translate3d(0,0,2vh) 

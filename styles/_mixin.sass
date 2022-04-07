@@ -8,7 +8,38 @@ $white : 	hsl(40, 25%, 83%)
 
 $grun: #50D890
 
+$h1 :5vh
+
+
+
+@mixin fromBase($a,$j,$ff)
+	@media screen and (min-width: 1px) 
+		@includeflex($a,$j,$ff)
+		
+
+
+
+
+@mixin fromTab($a,$j,$ff)
+	@media screen and (min-width: 501px) 
+		@includeflex($a,$j,$ff)
+		
+
+
+
 	
+
+@mixin fromDesktop($a,$j,$ff)
+	@media screen and (min-width: 1001px) 
+		@includeflex($a,$j,$ff)
+		
+
+	
+
+
+
+
+
 @mixin clear
 	padding: 0
 	margin: 0

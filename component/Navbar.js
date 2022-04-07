@@ -3,15 +3,21 @@ import Link  from 'next/link'
 
 import { useState } from 'react'
 
-import { motion } from 'framer-motion'
+import { motion  , AnimatePresence } from 'framer-motion'
 
 
 const variants = {
-  open: { opacity: 1, x: 0 },
-  closed: { opacity: 0,x: "70%" },
-  transition: {
-    staggerChildren: 1
-  }
+  open: { opacity: 1, y: 0  , display: 'flex' },
+  
+  closed: { opacity:0 ,y: 100},
+
+
+out: {display:'none',
+  transition: {delay: 1 }
+}
+
+
+  
 
 }
 
@@ -19,6 +25,9 @@ const variants = {
 const Navbar = () => {
 
   const [menu , setMenu] = useState(false)
+
+
+  const navi = ['home', 'work', 'about', 'blog']
 
   return (
     <div className={nav.wrapper} >
@@ -28,33 +37,35 @@ const Navbar = () => {
       <div style={menu ? { opacity: '0' , scale: '0'}: {opacity: '1' ,scale: '1'}} ></div>
       <div style={menu ? {transform: 'rotate(-235deg) translate3d(0,0,2vh)' , top: '45%' } : {transform: 'rotate(0) translate3d(0,0,2vh)' , bottom: '1.25vh'}  } ></div>
       </section>
+      
 
-      <motion.section 
-      
-      
-      animate={menu ? "open" : "closed"}
+    
+
+
+
+      <motion.section   
+      animate={menu ? "open" : ["closed" , "out"] }
       variants={variants}
-      
-      
-      
-      
       className={nav.linkWrap} >
 
-        <h3>HOME</h3>
-        <h3>WORK</h3>
-        <h3>ABOUT</h3>
-        <h3>BLOG</h3>
+        {navi.map((item,i) =>(
+          <h3 i={i} key={i}> {item} </h3>
+        ))}
 
-
-        <section>
+       <section> 
           <h5>twitter</h5>
           <h5>email</h5>
           <h5>github</h5>
         </section>
 
 
-      </motion.section>
+      
 
+
+      </motion.section>
+   
+
+    
     </div>
   )
 }
