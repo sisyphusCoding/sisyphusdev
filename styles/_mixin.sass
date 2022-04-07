@@ -1,0 +1,30 @@
+$cubic: cubic-bezier(.5,2,0,1)
+
+$cubicb: cubic-bezier(.5,.8,0,-1)
+
+$red: 	hsl(342, 79%, 41%)
+
+$white : 	hsl(40, 25%, 83%)
+
+$grun: #50D890
+
+	
+@mixin clear
+	padding: 0
+	margin: 0
+	list-style: none	
+
+
+@mixin blur($i)
+		backdrop-filter: blur($i + vh)
+		-webkit-backdrop-filter: blur($i + vh)
+
+@mixin flex($align-items, $justify-content , $flex-flow , )
+		display: flex
+		align-items: $align-items
+		justify-content: $justify-content 
+		flex-flow: $flex-flow
+			
+
+
+

@@ -1,0 +1,56 @@
+@import _mixin
+    
+.linkWrap
+    height: 100vh
+    position: absolute
+    width: 50vh
+    padding: 1vh 0vw
+    @include flex(flex-end,space-evenly,column)
+    background: rgba(255,255,255,.1)
+    box-shadow: 0 -1vh 3vh rgba(0,0,0,.6)
+    @include blur(.3)
+    padding: 0 3vw
+    z-index: 0
+    h3
+        font-size: 7vh
+        letter-spacing: 1.5vw
+        cursor: pointer
+        transform: perspective(50rem) rotateX(0) rotateY(-25deg)
+        width: 100%
+        transition: all 1s $cubic
+        text-align: right
+        padding-right: 3vw
+        &:hover
+            letter-spacing: 1vw
+            transform: perspective(50rem) rotateX(20deg) rotateY(5deg)
+
+.wrapper
+    @include flex(flex-end,flex-start,column)
+    border: 1px solid green
+    height:100vh
+    position: relative
+    gap: 3vh    
+    .menu
+        z-index:5
+        margin-top: 2rem    
+        border: 1px solid  rgba(255,255,255,.2)  
+        @include flex(center,center,column)
+        cursor: pointer
+        right: 1vw
+        height: 6vh
+        aspect-ratio: 1
+        position: relative
+        background: rgba(255,255,255,.08)
+        border-radius: 3vh
+        @include blur(.2)
+        transition: all 1s $cubicb 
+        box-shadow: 0 0 4vh -.8vh rgba(0,0,0,.6)
+        > *
+            transform: translate3d(0,0,5vh)
+            height: .4vh 
+            width: 4vh
+            border-radius: .5vh
+            background: $white
+            position: absolute
+            transition: all 1s $cubic
+            
