@@ -1,26 +1,37 @@
 @import _mixin
 
+@keyframes hello
+    from
+        transform:  perspective(100rem)  translate3d(0,10rem,0rem)  rotateX(0) 
+        opacity: 0
+        clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%)
+    to    
+        opacity: 1
+        transform: perspective(50rem) translate3d(0,0,-4rem) rotateX(0) 
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%)
+
 
 @keyframes flip
     0%,100% 
-        transform: perspective(100vh) rotateX(0)
+        transform:   perspective(50rem) translate3d(0,0,-4rem) rotateX(0) 
     40%,60%
-        transform: perspective(100vh) rotateX(-180deg)    
+        transform:  perspective(50rem)  translate3d(0,0,-4rem) rotateX(180deg)  
 
-
+@include animate(fade-inDown , 0 , -3)	
 
 
 .name
     z-index: 0
-    font-size: $h1 + 10
+    overflow: hidden  
+    font-size: 15vw
     font-weight: bold
     letter-spacing: 1vw
     color: $white
     text-shadow: 0 0 1vh transparent
     transition: all 400ms ease
-    width: 100vw
+    max-width: 100%
     text-align: left
-    
+    animation: fade-inDown 2s both $cubic .8s
     @include flex(flex-start,flex-start,row wrap)
     &:hover
         color: $grun
@@ -37,18 +48,18 @@
         width: 70%  
         overflow: hidden  
         height: 100%
-
         padding-left: 5vw
         .text
-            min-width: 100vh
+            min-width: 150vw
             text-align: left
             height: 50%
-            animation: span 10s linear infinite      
+            transform: translate3d(-50vw,0,0)
+            animation: span 6s linear infinite alternate 1.5s 
             @keyframes span
                 0%
-                    transform: translate3d(-100%,0,0)
+                    transform: translate3d(-50vw,0,0)
                 100%
-                    transform: translate3d(100%,0,0)
+                    transform: translate3d(100vw,0,0)
                           
             
             
@@ -58,28 +69,31 @@
 
 .homeWrap
     min-width: 95vw
-    min-height: 90vh
+    width: 95vw
+    border: 1px solid white
+    min-height: 95vh
+    height: 95vh
     @include flex(flex-start,center,column)
     .hello
         font-size: $h1
+        width: 100%
+        transform: perspective(50rem) translate3d(0,0,-4rem) rotateX(0) 
         letter-spacing: 1vw
-        transform: perspective(100vh) rotateX(0)
         position: relative
         transform-style: preserve-3d
-        
         height: 10vh
         width: 35vh
-
-        animation: flip 3s ease infinite 4s alternate
+        animation: hello 2s $cubic  , flip 3s ease infinite 2.5s 
         > *
             transform-style: preserve-3d
             position: absolute
-            text-align: center
+            text-align: left
             height: 100%
-            width: 100%
+            width: fit-content
+            min-width: 40vw
             line-height: 10vh
             backface-visibility: hidden
         .front
-            transform: perspective(100vh) rotateX(0) translate3d(0,0,2vh) 
+            transform: perspective(100vh)  translate3d(0,0,2vh)  
         .back   
-            transform: perspective(100vh) rotateX(180deg) translate3d(0,0,2vh) 
+            transform: perspective(100vh) translate3d(0,0,2vh) rotateX(180deg) 

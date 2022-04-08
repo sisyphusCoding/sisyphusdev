@@ -5,11 +5,14 @@ import Navbar from './Navbar'
 import layout from '../styles/layout.module.sass'
 
 
-const Layout = ({children}) => {
+const Layout = ({children , router}) => {
+
+  
+
   return (
       <div className={layout.bodyWrap} >
           <section className={layout.nav} >
-          <Navbar />
+          <Navbar  />
            </section>
           <section className={layout.content} >
             <main>{children}</main>
