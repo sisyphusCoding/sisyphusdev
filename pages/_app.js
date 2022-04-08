@@ -5,7 +5,7 @@ import Layout from '../component/Layout'
 
 
 import {motion , AnimatePresence} from 'framer-motion'
-import { Router } from 'next/router'
+
 
 
 function MyApp({ Component, pageProps , router }) {
@@ -19,7 +19,6 @@ function MyApp({ Component, pageProps , router }) {
 
 
   return (
-
     <Layout>
        <AnimatePresence exitBeforeEnter>
       <motion.div

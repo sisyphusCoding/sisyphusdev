@@ -5,9 +5,8 @@ import Navbar from './Navbar'
 import layout from '../styles/layout.module.sass'
 
 
-const Layout = ({children , router}) => {
+const Layout = ({children}) => {
 
-  
 
   return (
       <div className={layout.bodyWrap} >
