@@ -8,9 +8,6 @@ import { useRouter } from 'next/router';
 import { motion  , AnimatePresence } from 'framer-motion'
 
 
-import NextLink from 'next/link'
-import { style } from 'canvas-sketch-util/color';
-
 
 const variants = {
   open: { opacity: 1, y: 0  , display: 'flex' },
