@@ -11,7 +11,7 @@ const Layout = ({children}) => {
   return (
       <div className={layout.bodyWrap} >
           <section className={layout.nav} >
-          <Navbar  />
+           <Navbar  />
            </section>
           <section className={layout.content} >
             <main>{children}</main>

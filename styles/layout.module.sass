@@ -3,16 +3,27 @@
 
 .bodyWrap
     min-height: 100vh
-    @include flex(center,center,row)
+    @include flex(center,flex-start,column)
     min-width: 100vw
     width: 100vw
     height: 100vh
     position: relative
     .nav
         top: 0
-        right: 0rem
         position: absolute
-        @include flex(flex-start,center,row)
+        right: 0
+        @include flex(flex-end,center,column)
+        height: 100vh
+        @media only screen and (min-width: 1002px)
+            width: 45vw
+        @media only screen and (min-width: 1px) and (max-width: 1001px)
+            width: 65vw
+      
         
+.content
+    height: 80vh
+    width: 100vw
+    @include flex(center,center,column)
+
     
     
