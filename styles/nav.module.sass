@@ -39,12 +39,15 @@
         width: 65vw
 
     .menu
+        @media only screen and (min-width: 1px) and (max-width: 1001px) 
+          right: 4vw
+        @media only screen and (min-width: 1002px)
+          right: 2vw
         z-index:5
         margin-top: 1vh    
         border: 1px solid  rgba(255,255,255,.2)  
         @include flex(center,center,column)
-        cursor: pointer
-        right: 1vw
+        cursor: pointer 
         height: 6vh
         transform: translate3d(0,0,1rem)
         aspect-ratio: 1
