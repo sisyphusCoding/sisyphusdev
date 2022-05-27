@@ -65,7 +65,15 @@ const NavBar = () => {
           hover:opacity-80 
           transition-all ease duration-300 p-4 rounded-full z-30 ${open? 'bg-stone-600':'bg-stone-700'}`}
           >
-      <Hamburger rounded toggled={open} distance='lg' hideOutline={false} onToggle={()=>{setOpen(!open)}} size={48} />
+      <Hamburger 
+          duration={2}
+          easing='cubic-bezier(.11,-0.72,0,1.84)'
+          rounded 
+          toggled={open} 
+          distance='lg' 
+          hideOutline={false} 
+          onToggle={()=>{setOpen(!open)}} 
+          size={48} />
       </span>
 
 
@@ -79,9 +87,9 @@ const NavBar = () => {
                 origin-bottom
                   z-20 absolute
                   min-h-screen w-[100vw]
-                  bg-[rgba(0,25,25,.1)]
-                  backdrop-filter mix-blend-luminosity
-                  backdrop-blur-2xl
+                  bg-[rgba(0,25,25,.7)]
+                  backdrop-filter
+                  backdrop-blur-xl
                   flex flex-col items-center justify-between"
           >
 
