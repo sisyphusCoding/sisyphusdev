@@ -63,6 +63,7 @@ const NavBar = () => {
       <span
           className={`
           hover:opacity-80 
+          scale-75 md:scale-100
           transition-all ease duration-300 p-4 rounded-full z-30 ${open? 'bg-stone-600':'bg-stone-700'}`}
           >
       <Hamburger 
