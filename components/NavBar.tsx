@@ -55,7 +55,7 @@ const NavBar = () => {
       <section
           className="
           min-w-[100vw]
-          flex p-4 relative flex-col items-end justify-between "  
+          flex md:p-4 p-2  relative flex-col items-end justify-between "  
           >
 
 
