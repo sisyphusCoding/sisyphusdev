@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face{
+  font-family: 'VONIQUE' ; 
+  src: url('../public/fonts/Vonique.ttf');
+
+}
+
+@font-face{
+  font-family:'OSTRICH';
+    src: url('../public/fonts/ostrich-sans.ttf');
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+.typed{
+
+   font-size: clamp(2rem, -0.975rem + 13vmin, 11rem);
+}
+
+h1{
+
+   font-size: clamp(2rem, -0.875rem + 15.333vw, 12rem);
+}
+
+
+h2{
+
+   font-size: clamp(1.8rem, -0.875rem + 8vw, 8rem);
+}
+
+h3{
+     font-size: clamp(1.5rem, -0.875rem + 6vw, 6rem); 
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  	-moz-osx-font-smoothing: grayscale;
+}
+
+
+.scrollCar {
+  animation: slide 14s linear infinite ;
+ 
+}
+
+
+.book{
+  
+  perspective:1000px;
+  transform-style:preserve-3d;
+  animation: flip 5s infinite alternate cubic-bezier(.27,-0.78,.67,1.56) ;
+}
+
+.front{
+  transform: rotateX(0) translate3d(0, 0 , 2vmin) ;
+}
+
+
+.back{
+  transform: rotateX(180deg) translate3d(0, 0 , 2vmin) ;
+}
+
+ @keyframes flip{
+    0%,10%,100% { 
+      transform: rotateX(0);
+    }
+    50%,60%{
+      transform: rotateX(180deg);
+    }
+} 
+
+ @keyframes slide{
+    from {
+      transform: translate3d(-280vmin,0,0);
+    }
+    to{
+      transform: translate3d(280vmin,0,0);
+    }
+  }
