@@ -101,7 +101,7 @@ const NavBar = () => {
             
          <div
             onClick={()=>{setOpen(!open)}}  
-            className="flex  grow  self-auto md:self-start  flex-col items-start justify-evenly"  
+            className="flex  grow  self-start  flex-col items-start justify-evenly"  
             >   
 
           {list.map((skill,i)=>(
