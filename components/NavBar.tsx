@@ -8,7 +8,7 @@ import {motion , AnimatePresence} from 'framer-motion'
 
 import {FaTwitter ,FaGithub , FaCodepen } from 'react-icons/fa'
 import{MdEmail} from 'react-icons/md'
-import { link } from "fs";
+import {useRouter} from 'next/router'
 
 
 
@@ -19,7 +19,7 @@ const NavBar = () => {
 
   const [show ,setShow] = useState<string>('') 
 
-  
+ const router = useRouter() 
 
   const wrapperAnima = {
 
@@ -29,12 +29,12 @@ const NavBar = () => {
 
     show: {
         scaleY:1,opacity:1,
-      transition:{type:'spring', stiffness:50 , staggerChildren:.25, delayChildren : .37   } } ,
+      transition:{type:'spring', stiffness:50 , staggerChildren:.25, delayChildren : .3   } } ,
 
 
     exit : {
         scaleY:0,opacity:1,
-        transition:{type:'spring' ,stiffness:50, staggerChildren : .2 ,staggerDirection: -1 ,delay:1.8 } } ,
+        transition:{type:'spring' ,stiffness:50, staggerChildren : .2 ,staggerDirection: -1 ,delay:2.1 } } ,
 
   }
 
@@ -43,18 +43,20 @@ const NavBar = () => {
   const linkAnima  = {
     hidden: {y:200 , opacity:1} ,
 
-    show:{y:0,opacity:1 , transition: {type:'spring',stiffness:50 , duration :2}}, 
+    show:{y:0,opacity:1 , transition: {type:'spring',stiffness:80 ,damping: 20 ,mass:.5 }}, 
 
-    exit : {y:-200 , opacity:1 , transition:{type:'spring' , stiffness:50} }
+    exit : {y:-200 , opacity:1 , transition:{type:'spring',damping: 20 , stiffness:80 , mass:.5} }
 
   }
 
-    const list:string[] = ['project' , 'about' , 'blog']
+    const list:string[] = ['home','project' , 'about' , 'blog']
 
-  return(
+    const listLink:string[] = ['/','/project' , '/about' , '/blog']
+
+    return(
       <section
           className="
-          min-w-[100vw]
+          min-w-[100vw] text-neutral-300 
           flex md:p-4 p-2  relative flex-col items-end justify-between "  
           >
 
@@ -62,9 +64,10 @@ const NavBar = () => {
 
       <span
           className={`
+      
           hover:opacity-80 
           scale-75 md:scale-100
-          transition-all ease duration-300 p-4 rounded-full z-30 ${open? 'bg-stone-600':'bg-stone-700'}`}
+          transition-all ease duration-300 p-4 rounded-full z-30 ${open? 'bg-stone-900':'bg-stone-700'}`}
           >
       <Hamburger 
           duration={2}
@@ -86,9 +89,10 @@ const NavBar = () => {
           initial='hidden' animate='show' exit='exit'
           className="top-0 left-0 
                 origin-bottom
-                  z-20 absolute
+                  z-10 absolute
                   min-h-screen w-[100vw]
-                  bg-[rgba(0,25,25,.7)]
+                  bg-[rgba(26,26,26,.8)]
+                  text-[rgba(255,255,255,.4)]
                   backdrop-filter
                   backdrop-blur-xl
                   flex flex-col items-center justify-between"
@@ -96,23 +100,24 @@ const NavBar = () => {
 
             
          <div
-            className="flex  grow  self-auto md:self-start  flex-col items-center justify-evenly"  
+            onClick={()=>{setOpen(!open)}}  
+            className="flex  grow  self-auto md:self-start  flex-col items-start justify-evenly"  
             >   
 
-          {list.map(skill=>(
+          {list.map((skill,i)=>(
 
                 <motion.div
                   key={skill} 
-                  className='
-                  drop-shadow-[0_5px_8px_rgba(0,0,0,1)]
-                  overflow-hidden
-                  px-4      
+                  className={` 
+                  ${router.route === listLink[i]? 'text-stone-50' :''  }
+                  overflow-clip
+                  px-4     
                   hover:text-stone-50
                   transition-all ease duration-200 
-                  cursor-pointer py-6' 
+                  cursor-pointer `}
                     >
                      
-                    <Link href={`/${skill}`}
+                    <Link href={`${listLink[i]}`}
                     ><motion.h2
                       variants={linkAnima} 
                       >{skill}</motion.h2></Link>   
@@ -124,7 +129,7 @@ const NavBar = () => {
         <div 
             className="flex  w-[100vw] items-center md:items-end p-10 gap-[5vmin] justify-center md:justify-end
               overflow-hidden 
-              text-[rgba(255,255,255,.2)] "  
+               "  
             >
 
             <motion.a

@@ -90,3 +90,9 @@ a {
       transform: translate3d(280vmin,0,0);
     }
   }
+
+
+
+h4{
+  font-size: clamp(1rem,2.5vmin,2.3rem)
+}  
