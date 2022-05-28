@@ -16,7 +16,7 @@ const Blog = () => {
       
 
       <Blogblock 
-        imagelink='blog1'
+      
         title='3D CSS - Introduction using Flip Card.'
         link="https://sisyphus.hashnode.dev/3d-css-introduction-using-flip-card"/>
 

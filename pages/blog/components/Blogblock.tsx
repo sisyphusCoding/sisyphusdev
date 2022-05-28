@@ -1,4 +1,7 @@
 import React, { useState } from 'react'
+import blog1 from './blog1.webp'
+
+
 
 import Image from 'next/image'
 interface Props {
@@ -29,7 +32,7 @@ const Blogblock: React.FC<Props> = ({title,imagelink,link}) => {
         <Image
           objectFit='cover'
           height={600} width={1000}
-          src={`/./${imagelink}.webp`} 
+          src={blog1} 
           layout="responsive" 
           alt='blog-image-header' />
       </span>  
@@ -37,7 +40,7 @@ const Blogblock: React.FC<Props> = ({title,imagelink,link}) => {
     <div
       className={`
         ${slide? 'translate-x-0' : 'translate-x-full' } 
-        transform-gpu px-4 z-30 will-change-transform
+        transform-gpu px-4  will-change-transform
         transition-transform ease-linear duration-200 
         shadow-[-5px_0_10px_black]
         font-bold
