@@ -17,14 +17,14 @@ const Blogblock: React.FC<Props> = ({title,imagelink,link}) => {
       onMouseLeave={()=>setSlide(false)}
       className='
         inline-flex rounded-2xl
-        relative  overflow-clip
+        relative overflow-x-hidden 
         shadow-[0_5px_40px_rgba(0,0,0,.7)]'
       >
     
       <span
         className="
         inline-block
-        w-[60vmin] h-fit "
+        w-[60vmin] h-fit"
         >
         <Image
           objectFit='cover'

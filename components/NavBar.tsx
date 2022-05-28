@@ -110,7 +110,7 @@ const NavBar = () => {
                   key={skill} 
                   className={` 
                   ${router.route === listLink[i]? 'text-stone-50' :''  }
-                  overflow-clip
+                  overflow-hidden
                   px-4     
                   hover:text-stone-50
                   transition-all ease duration-200 
