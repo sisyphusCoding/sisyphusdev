@@ -65,7 +65,7 @@ const About: React.FC = () => {
           className="overflow-hidden shadow-[rgba(0,0,0,1)_0_10px_40px] rounded-2xl inline-flex"
             >
 
-            Education
+        
 
           </div>
 </motion.section>

@@ -4,6 +4,8 @@ import React, { useState } from 'react'
 
 
 import Image from 'next/image'
+import blog1 from './blog1.jpg'
+
 interface Props {
   title:string,
   index:string,
@@ -33,7 +35,7 @@ const Blogblock: React.FC<Props> = ({title,index,link}) => {
         <Image
           objectFit='cover'
           height={600} width={1000}
-          src={`./blog${index}.webp`} 
+          src={blog1} 
           layout="responsive" 
           alt='blog-image-header' />
       </span>  
