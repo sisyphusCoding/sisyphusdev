@@ -67,12 +67,15 @@ const Blog = () => {
           className="
             flex px-10
             flex-row flex-wrap items-center justify-between
-            min-h-screen border-2 border-black grow w-full"
+            min-h-screen grow w-full"
           >
       <motion.div
 
         variants={verticalIn}
-            className="overflow-hidden shadow-[rgba(0,0,0,1)_0_10px_40px] rounded-2xl inline-flex"
+            className="
+              drop-shadow-[rgba(0,0,0,1)_0_10px_30px] filter
+              overflow-hidden flex justify-self-stretch items-stretch
+              rounded-2xl "
             >
       <Blogblock 
         index="1" 

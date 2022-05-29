@@ -7,7 +7,7 @@ const Skeleton: React.FC = () => {
 
   return(
       <div
-          className="w-[60vmin] h-[35vmin] flex flex-col px-5 items-start justify-around bg-neutral-700 cursor-not-allowed"
+          className="w-[60vmin] h-[34.5vmin] flex flex-col px-5 items-start justify-around bg-neutral-700 cursor-not-allowed"
           >
       <span className="motion-safe:animate-pulse rounded-full h-[8vmin] w-[8vmin] bg-neutral-500"></span> 
       

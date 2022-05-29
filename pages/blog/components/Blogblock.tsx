@@ -21,32 +21,33 @@ const Blogblock: React.FC<Props> = ({title,index,link}) => {
       onMouseEnter={()=>setSlide(true)}
       onMouseLeave={()=>setSlide(false)}
       className='
-          flex row items-stretch justify-center
+          inline-flex row items-stretch justify-center
         relative 
           
         '
       >
     
-      <span
+      <div
         className="
-        inline-block
-        w-[60vmin] h-fit"
+         
+        rounded-2xl
+
+        inline-block w-[60vmin] "
         >
         <Image
           objectFit='cover'
-          height={600} width={1000}
+          height={570} width={980}
           src={blog1} 
           layout="responsive" 
           alt='blog-image-header' />
-      </span>  
+      </div>  
   
     <div
       className={`
         ${slide? 'right-0 opacity-100' : ' -right-[100%] opacity-1' } 
         px-4  will-change-transform
-        rounded-r-md
         transition-allease duration-700 
-        font-bold
+        font-bold rounded-r-2xl
         right-0 top-0 text-stone-800
         flex flex-col items-end justify-evenly 
         absolute h-full w-fit 
