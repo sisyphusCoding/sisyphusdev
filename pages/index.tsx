@@ -46,7 +46,7 @@ const top= {
       <h1 className='w-[100vmin] typed  tracking-wide' >   
         <Typed strings={['I&apos;m anish' , 'I&apos;m kanna' , 'Ich bin anish' , 'Ich bin kanna']}
             smartBackspace={true}  startDelay={2500}
-            typeSpeed={120} loop backSpeed={50}/>
+            typeSpeed={100} loop backSpeed={50}/>
         </h1>
       
       </div>

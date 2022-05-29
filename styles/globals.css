@@ -68,7 +68,7 @@ a {
   
   perspective:1000px;
   transform-style:preserve-3d;
-  animation: flip 5s infinite alternate cubic-bezier(.27,-0.78,.67,1.56) 2s ;
+  animation: flip 14s infinite cubic-bezier(.09,1.6,.79,-0.54) alternate ;
 }
 
 .front{
@@ -81,10 +81,10 @@ a {
 }
 
  @keyframes flip{
-    0%,10%,100% { 
+    0%,50% { 
       transform: rotateX(0);
     }
-    50%,60%{
+    60%,100%{
       transform: rotateX(180deg);
     }
 } 
