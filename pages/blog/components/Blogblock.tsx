@@ -1,16 +1,16 @@
 import React, { useState } from 'react'
-import blog1 from './blog1.webp'
+
 
 
 
 import Image from 'next/image'
 interface Props {
   title:string,
-  imagelink:any,
+  index:string,
   link:string,
 }
 
-const Blogblock: React.FC<Props> = ({title,imagelink,link}) => {
+const Blogblock: React.FC<Props> = ({title,index,link}) => {
 
   const [slide,setSlide] = useState<boolean>(false)
 
@@ -19,9 +19,10 @@ const Blogblock: React.FC<Props> = ({title,imagelink,link}) => {
       onMouseEnter={()=>setSlide(true)}
       onMouseLeave={()=>setSlide(false)}
       className='
-        inline-flex rounded-2xl
-        relative overflow-x-hidden 
-        shadow-[0_5px_40px_rgba(0,0,0,.7)]'
+          flex row items-stretch justify-center
+        relative 
+          
+        '
       >
     
       <span
@@ -32,21 +33,21 @@ const Blogblock: React.FC<Props> = ({title,imagelink,link}) => {
         <Image
           objectFit='cover'
           height={600} width={1000}
-          src={blog1} 
+          src={`/./blog${index}.webp`} 
           layout="responsive" 
           alt='blog-image-header' />
       </span>  
   
     <div
       className={`
-        ${slide? 'translate-x-0' : 'translate-x-full' } 
-        transform-gpu px-4  will-change-transform
-        transition-transform ease-linear duration-200 
-        shadow-[-5px_0_10px_black]
+        ${slide? 'right-0 opacity-100' : ' -right-[100%] opacity-1' } 
+        px-4  will-change-transform
+        rounded-r-md
+        transition-allease duration-700 
         font-bold
         right-0 top-0 text-stone-800
         flex flex-col items-end justify-evenly 
-        absolute h-full 
+        absolute h-full w-fit 
         bg-[rgba(255,255,255,.4)] backdrop-brightness-50 backdrop-filter backdrop-blur-md `}
       >  
       <h4 

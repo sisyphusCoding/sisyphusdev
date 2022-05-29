@@ -18,18 +18,18 @@ function MyApp({ Component, pageProps }: AppProps) {
   const wrapperAnima = {
 
 
-    hidden: {y:-1000,opacity:0} ,
+    hidden: {y:50,opacity:0} ,
 
 
     show: 
     {
        x:0,y:0,opacity:1,
-      transition:{type:'spring', stiffness:50 , staggerChildren:.25, delayChildren : .37  ,delay:1  } } ,
+      transition:{type:'spring', staggerChildren:.25, delayChildren : .37  } } ,
 
 
     exit : {
         y:1000,opacity:0,
-        transition:{type:'spring' ,stiffness:50, staggerChildren : .2 ,staggerDirection: -1 ,delay:2 } } ,
+        transition:{type:'spring' ,stiffness:50,damping:20, staggerChildren : .2 ,staggerDirection: -1 ,delay:2.1 , duration:1 } } ,
 
   }
 

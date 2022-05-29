@@ -17,9 +17,9 @@ const top= {
   } 
 
   const bottom= {
-    initial :{x:-1000,opacity:0},
-    show: {x:0,opacity:1 , transition:{stiffness:40,type:'spring' ,delay:2 , }},
-    exit:{x:-100,opacity:0}
+    initial :{y:100,opacity:0},
+    show: {y:0,opacity:1 , transition:{stiffness:40,type:'spring' ,delay:2 , }},
+    exit:{y:-100,opacity:0}
   }
 
 
@@ -45,7 +45,7 @@ const top= {
         </motion.h2>  
       <h1 className='w-[100vmin] typed  tracking-wide' >   
         <Typed strings={['I&apos;m anish' , 'I&apos;m kanna' , 'Ich bin anish' , 'Ich bin kanna']}
-            smartBackspace={true}  startDelay={2000}
+            smartBackspace={true}  startDelay={2500}
             typeSpeed={120} loop backSpeed={50}/>
         </h1>
       
