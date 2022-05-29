@@ -33,7 +33,7 @@ const Blogblock: React.FC<Props> = ({title,index,link}) => {
         <Image
           objectFit='cover'
           height={600} width={1000}
-          src={`/./blog${index}.webp`} 
+          src={`./blog${index}.webp`} 
           layout="responsive" 
           alt='blog-image-header' />
       </span>  
