@@ -94,7 +94,7 @@ const NavBar = () => {
                   bg-[rgba(26,26,26,.8)]
                   text-[rgba(255,255,255,.4)]
                   backdrop-filter
-                  backdrop-blur-xl
+                  backdrop-blur-[.8vw]
                   flex flex-col items-center justify-between"
           >
 

@@ -12,13 +12,13 @@ const Home: NextPage = () => {
 
 const top= {
     initial :{opacity:0},
-    show: {opacity:1 , transition:{stiffness:40,type:'spring' ,delay:2 , }},
+    show: {opacity:1 , transition:{stiffness:40,type:'spring' ,delay:.5 , }},
     exit:{opacity:0}
   } 
 
   const bottom= {
     initial :{y:100,opacity:0},
-    show: {y:0,opacity:1 , transition:{stiffness:40,type:'spring' ,delay:2 , }},
+    show: {y:0,opacity:1 , transition:{type:'spring' ,delay:.2  }},
     exit:{y:-100,opacity:0}
   }
 
@@ -45,8 +45,8 @@ const top= {
         </motion.h2>  
       <h1 className='w-[100vmin] typed  tracking-wide' >   
         <Typed strings={['I&apos;m anish' , 'I&apos;m kanna' , 'Ich bin anish' , 'Ich bin kanna']}
-            smartBackspace={true}  startDelay={2500}
-            typeSpeed={100} loop backSpeed={50}/>
+            smartBackspace={true}  startDelay={2000}
+            typeSpeed={100} loop backSpeed={30}/>
         </h1>
       
       </div>

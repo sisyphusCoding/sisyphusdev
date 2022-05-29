@@ -34,7 +34,7 @@ body {
 
 h1{
 
-   font-size: clamp(2rem, -0.875rem + 15.333vw, 12rem);
+   font-size: clamp(2rem, -0.875rem + 13.333vw, 9rem);
 }
 
 
@@ -59,7 +59,7 @@ a {
 
 
 .scrollCar {
-  animation: slide 14s linear infinite 2s ;
+  animation: slide 16s linear  infinite .3s  ;
  
 }
 
@@ -68,7 +68,7 @@ a {
   
   perspective:1000px;
   transform-style:preserve-3d;
-  animation: flip 14s infinite cubic-bezier(.09,1.6,.79,-0.54) alternate ;
+  animation: flip 7s infinite ease-out  alternate 1.5s ;
 }
 
 .front{
@@ -91,10 +91,10 @@ a {
 
  @keyframes slide{
     from {
-      transform: translate3d(-280vmin,0,0);
+      transform: translate3d(190vw,0,0);
     }
     to{
-      transform: translate3d(280vmin,0,0);
+      transform: translate3d(-190vw,0,0);
     }
   }
 
