@@ -110,6 +110,7 @@ const NavBar = () => {
                   key={skill} 
                   className={` 
                   ${router.route === listLink[i]? 'text-stone-50' :''  }
+                  ${i === 1 || i === 2 ? 'line-through  text-red-500 opacity-40': ''}  
                   overflow-hidden
                   px-4     
                   hover:text-stone-50
