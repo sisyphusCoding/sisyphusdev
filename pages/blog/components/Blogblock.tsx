@@ -32,11 +32,11 @@ const Blogblock: React.FC<Props> = ({title,index,link}) => {
          
         rounded-2xl
 
-        inline-block w-[60vmin] "
+        inline-block w-[50vmin] "
         >
         <Image
           objectFit='cover'
-          height={570} width={980}
+          height={600} width={1100}
           src={blog1} 
           layout="responsive" 
           alt='blog-image-header' />

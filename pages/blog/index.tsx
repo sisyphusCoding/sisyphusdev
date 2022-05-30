@@ -65,9 +65,10 @@ const Blog = () => {
           variants={sectionWrap}
      initial='hidden' animate='show' exit='exit'
           className="
-            flex px-10
-            flex-row flex-wrap items-center justify-between
-            min-h-screen grow w-full"
+            overflow-scroll max-h-[90vh]
+            flex px-10 py-20  lg:justify-between gap-10
+            flex-row flex-wrap items-center justify-center
+             grow w-full"
           >
       <motion.div
 
@@ -88,7 +89,16 @@ const Blog = () => {
             >
             <Skeleton />
     </motion.div>
-</motion.section>
+     <motion.div
+        variants={verticalIn}
+          className="overflow-hidden shadow-[rgba(0,0,0,1)_0_10px_40px] rounded-2xl inline-flex"
+            >
+            <Skeleton />
+    </motion.div>
+
+
+
+        </motion.section>
 
 
 </AnimatePresence>
