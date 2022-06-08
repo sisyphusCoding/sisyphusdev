@@ -62,11 +62,13 @@ const Project: React.FC = () => {
       </motion.div>
 
       <motion.section 
-          className="
-          
-            min-h-screen 
-            flex px-10 py-2  lg:justify-evenly gap-10
-            flex-row flex-wrap items-center justify-center
+          className="          
+            lg:overflow-auto
+            overflow-scroll
+            min-h-screen max-h-screen
+            items-center
+            flex px-10 py-2  md:justify-evenly gap-10
+            flex-row flex-wrap  justify-start 
             grow w-full"
        variants={sectionWrap}>
 

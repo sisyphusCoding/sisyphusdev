@@ -22,7 +22,7 @@ body {
 }
 
 .vertical{
-  @apply min-h-screen bg-stone-50 text-center;
+  @apply h-full bg-stone-50 text-center;
   writing-mode: vertical-rl;
   text-orientation: upright;
 }
