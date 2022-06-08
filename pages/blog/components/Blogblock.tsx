@@ -64,7 +64,10 @@ const Blogblock: React.FC<Props> = ({title,index,link}) => {
           px-6 py-2 rounded-2xl
           bg-[rgba(0,0,0,.6)] '  
         >
-          <a href={link}>
+          <a href={link}
+           target='_blank'
+            rel='noreferrer'
+            >
               <h5>READ</h5>
           </a>
         </button>
