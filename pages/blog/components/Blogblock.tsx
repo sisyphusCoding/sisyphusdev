@@ -65,7 +65,7 @@ const Blogblock: React.FC<Props> = ({title,index,link}) => {
           bg-[rgba(0,0,0,.6)] '  
         >
           <a href={link}>
-              <h4>READ</h4>
+              <h5>READ</h5>
           </a>
         </button>
 

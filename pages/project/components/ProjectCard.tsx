@@ -68,11 +68,11 @@ const ProjectCard: React.FC<Props> = ({title,index,link}) => {
           transition-all ease duration-300
           text-stone-100 hover:text-[rgba(0,0,0,.6)]
           hover:bg-[rgba(255,255,255,.4)]
-          px-6 py-2 rounded-2xl
+          px-6 py-2 rounded-xl
           bg-[rgba(0,0,0,.6)] '  
         >
           <a href={link} target="_blank" rel='noreferrer'>
-              <h4>Live link</h4>
+              <h5>Live link</h5>
           </a>
         </button>
 

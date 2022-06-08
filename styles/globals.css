@@ -111,5 +111,9 @@ a {
 
 
 h4{
-  font-size: clamp(1rem,2.5vmin,2.3rem)
+  font-size: clamp(.5rem,2vmin,2.3rem)
 }  
+
+h5{
+  font-size: clamp(.4rem,1.5vmin,1.5rem)
+}
