@@ -1,7 +1,14 @@
+
 import React, { useState } from 'react'
 
 import Image from 'next/image'
-import blog1 from './blog1.jpg'
+
+import pro0 from './pro0.png'
+import pro1 from './pro1.png'
+import pro2 from './pro2.png'
+import pro3 from './pro3.png'
+import pro4 from './pro4.png'
+import pro5 from './pro5.png'
 
 interface Props {
   title:string,
@@ -10,9 +17,9 @@ interface Props {
 }
 
 
-  let blogpost = [blog1]
+  let projectlist = [pro0,pro1,pro2,pro3,pro4,pro5]
 
-const Blogblock: React.FC<Props> = ({title,index,link}) => {
+const ProjectCard: React.FC<Props> = ({title,index,link}) => {
 
   const [slide,setSlide] = useState<boolean>(false)
 
@@ -37,7 +44,7 @@ const Blogblock: React.FC<Props> = ({title,index,link}) => {
         <Image
           objectFit='cover'
           height={600} width={1100}
-          src={blogpost[index]} 
+          src={projectlist[index]} 
           layout="responsive" 
           alt='blog-image-header' />
       </div>  
@@ -64,8 +71,8 @@ const Blogblock: React.FC<Props> = ({title,index,link}) => {
           px-6 py-2 rounded-2xl
           bg-[rgba(0,0,0,.6)] '  
         >
-          <a href={link}>
-              <h4>READ</h4>
+          <a href={link} target="_blank" rel='noreferrer'>
+              <h4>Live link</h4>
           </a>
         </button>
 
@@ -81,4 +88,4 @@ const Blogblock: React.FC<Props> = ({title,index,link}) => {
 
 
 
-export default Blogblock
+export default ProjectCard

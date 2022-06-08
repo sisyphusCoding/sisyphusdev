@@ -57,7 +57,7 @@ const NavBar = () => {
       <section
           className="
           min-w-[100vw] text-neutral-300 
-          flex md:p-4 p-2  relative flex-col items-end justify-between "  
+          flex p-1  relative flex-col items-end justify-between "  
           >
 
 
@@ -110,7 +110,7 @@ const NavBar = () => {
                   key={skill} 
                   className={` 
                   ${router.route === listLink[i]? 'text-stone-50' :''  }
-                  ${i === 1 || i === 2 ? 'line-through  text-red-500 opacity-40': ''}  
+                  ${i === 2 ? 'line-through  text-red-500 opacity-40': ''}  
                   overflow-hidden
                   px-4     
                   hover:text-stone-50

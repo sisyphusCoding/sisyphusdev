@@ -8,7 +8,7 @@ const Blog = () => {
 
   const leftIn = {
     hidden: {x:-100,opacity:0},
-    show:{x:0,opacity:1,transition:{staggerChildren:.3,type:'spring', delay:.4 , damping: 30}},
+    show:{x:0,opacity:1,transition:{staggerChildren:.3,type:'spring', delay:.2 , damping: 30}},
     opacity:{x:100,opacity:0}
   }
 
@@ -64,14 +64,13 @@ const Blog = () => {
       <motion.section
           variants={sectionWrap}
      initial='hidden' animate='show' exit='exit'
-          className="
-            overflow-scroll max-h-[90vh]
-            flex px-10 py-20  lg:justify-between gap-10
+          className=" 
+            max-h-[90vh]
+            flex px-10 py-2  lg:justify-between gap-10
             flex-row flex-wrap items-center justify-center
              grow w-full"
           >
       <motion.div
-
         variants={verticalIn}
             className="
               drop-shadow-[rgba(0,0,0,1)_0_10px_30px] filter
@@ -79,7 +78,7 @@ const Blog = () => {
               rounded-2xl "
             >
       <Blogblock 
-        index="1" 
+        index="0" 
         title='3D CSS - Introduction using Flip Card.'
         link="https://sisyphus.hashnode.dev/3d-css-introduction-using-flip-card"/>           
     </motion.div>

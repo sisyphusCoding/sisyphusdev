@@ -18,7 +18,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   const wrapperAnima = {
 
 
-    hidden: {y:50,opacity:0} ,
+    hidden: {y:'10%',opacity:0} ,
 
 
     show: 
@@ -28,7 +28,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
 
     exit : {
-        y:1000,opacity:0,
+        y:'150%',opacity:0,
         transition:{type:'spring' ,stiffness:50,damping:20, staggerChildren : .2 ,staggerDirection: -1 ,delay:2.1 , duration:1 } } ,
 
   }
