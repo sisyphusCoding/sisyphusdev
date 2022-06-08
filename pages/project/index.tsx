@@ -45,8 +45,8 @@ const Project: React.FC = () => {
   return(
     <main 
       className="min-h-screen min-w-full flex 
-     
-      flex-row justify-between items-end"
+      overflow-hidden 
+      flex-row justify-between items-center"
       >
     <AnimatePresence>
       <motion.div
@@ -63,11 +63,11 @@ const Project: React.FC = () => {
 
       <motion.section 
           className="
-            mb-4
-            h-[90vmin] 
-            flex px-10 py-2  lg:justify-around gap-10
+          
+            min-h-screen 
+            flex px-10 py-2  lg:justify-evenly gap-10
             flex-row flex-wrap items-center justify-center
-             grow w-full"
+            grow w-full"
        variants={sectionWrap}>
 
 
